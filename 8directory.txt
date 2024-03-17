@@ -1,0 +1,32 @@
+#!/bin/bash
+
+echo "Enter directory path:"
+read directory
+
+# Check if directory exists
+if [ -d "$directory" ]; then
+    echo "Directory '$directory' exists."
+
+    # Check if directory is empty
+    if [ -z "$(ls -A $directory)" ]; then
+        echo "Directory '$directory' is empty."
+    else
+        echo "Directory '$directory' is not empty."
+    fi
+
+    # Check if directory is a file
+    if [ -f "$directory" ]; then
+        echo "'$directory' is a file, not a directory."
+    else
+        echo "'$directory' is a directory."
+    fi
+
+else
+    echo "Directory '$directory' does not exist."
+fi
+output:
+Enter directory path:
+/home/kali/impsh/test
+Directory '/home/kali/impsh/test' exists.
+Directory '/home/kali/impsh/test' is empty.
+'/home/kali/impsh/test' is a directory.

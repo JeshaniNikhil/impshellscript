@@ -1,0 +1,14 @@
+#!/bin/bash
+function digital_clock
+{
+clear
+	while true
+	do
+	date +%T
+	sleep 1
+	clear
+	done
+}
+digital_clock
+output:
+11:02:22

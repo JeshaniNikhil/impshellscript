@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "Enter the number:"
+read n
+
+temp=$n
+sum=0
+
+while [ $n -gt 0 ]
+do
+    r=$((n % 10))
+    sum=$((sum + r * r * r))
+    n=$((n / 10))
+done
+
+if [ $temp -eq $sum ]; then
+    echo "Armstrong number"
+else
+    echo "Not Armstrong number"
+fi
+output:
+Enter the number:
+153
+Armstrong number

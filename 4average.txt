@@ -1,0 +1,18 @@
+#!/bin/bash
+echo "Enter First Number:"
+read f
+echo "Enter Second Number:"
+read s
+echo "Enter Third Number:"
+read t
+tot=`expr $f + $s + $t` 
+avg=`expr $tot / 3`
+echo "average is : $avg"
+output:
+Enter First Number:
+10
+Enter Second Number:
+20
+Enter Third Number:
+30
+average is : 20
